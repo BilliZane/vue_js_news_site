@@ -49,6 +49,11 @@ export default {
     justify-content: center;
     max-width: max-content;
     padding: 2px;
+    background: rgb(114, 113, 108);
+    padding: 5px 10px;
+    border-radius: 60px;
+    border: solid 2px #fff;
+    opacity: 0.8;
   }
   &__item {
     display: flex;
@@ -56,13 +61,14 @@ export default {
     align-items: center;
     min-width: 30px;
     min-height: 30px;
-    background: rgb(48, 73, 92);
+    background: #575757;
     color: #fff;
-    margin-right: 4px;
-    border: solid 2px rgb(255, 239, 147);
+    margin-right: 5px;
+    border: solid 2px #fff;
     border-radius: 50px;
     font-weight: 600;
     font-size: 14px;
+    box-shadow: 0 4px 4px 2px rgba(34, 60, 80, 0.2);
     transition: background 600ms;
     &:hover {
       cursor: pointer;
