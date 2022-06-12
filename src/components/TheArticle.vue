@@ -1,6 +1,8 @@
 <template>
   <div class="article">
-    <img class="article__img" :src="article.urlToImage" alt="Image" />
+    <div class="article__img-wrap">
+      <img class="article__img" :src="article.urlToImage" alt="Image" />
+    </div>
     <div class="article__info">
       <div class="article__title">
         {{ titleSnippet }}
@@ -58,22 +60,32 @@ export default {
 <style lang="scss">
 .article {
   display: flex;
-  background: rgb(255, 239, 147);
+  background: #fff;
   margin-bottom: 20px;
   padding: 20px;
   box-shadow: 0 4px 8px 2px rgba(34, 60, 80, 0.2);
   &:last-child {
     margin-bottom: 0;
   }
-  @media (max-width: 765px) {
+  @media (max-width: 630px) {
     flex-wrap: wrap;
   }
+  &__img-wrap {
+    @media (max-width: 630px) {
+      min-width: 100%;
+      text-align: center;
+      padding-bottom: 20px;
+    }
+  }
   &__img {
+    display: block;
     max-width: 300px;
-    max-height: 200px;
     display: block;
     box-shadow: 0 4px 8px 5px rgba(34, 60, 80, 0.2);
-    border-radius: 15px;
+    border-radius: 10px;
+    @media (max-width: 630px) {
+      max-width: 100%;
+    }
   }
   &__info {
     padding-left: 15px;

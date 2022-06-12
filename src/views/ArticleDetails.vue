@@ -14,6 +14,8 @@ export default {
   props: ['id'],
 
   setup(props) {
+    document.title = 'Global news 12345'
+
     const news = News
     const singleArticle = computed(
       () => news.value.filter((x) => x.source.id === +props.id)[0]

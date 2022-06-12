@@ -43,17 +43,15 @@ export default {
   display: flex;
   justify-content: center;
   padding: 10px 0;
-  border: solid 1px red;
+  margin-top: -20px;
   &__wrap {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     max-width: max-content;
     padding: 2px;
-    background: rgb(114, 113, 108);
     padding: 5px 10px;
     border-radius: 60px;
-    border: solid 2px #fff;
-    opacity: 0.8;
   }
   &__item {
     display: flex;
@@ -64,12 +62,14 @@ export default {
     background: #575757;
     color: #fff;
     margin-right: 5px;
-    border: solid 2px #fff;
-    border-radius: 50px;
-    font-weight: 600;
+    border-radius: 2px;
+    font-weight: 300;
     font-size: 14px;
     box-shadow: 0 4px 4px 2px rgba(34, 60, 80, 0.2);
     transition: background 600ms;
+    @media (max-width: 400px) {
+      margin-bottom: 5px;
+    }
     &:hover {
       cursor: pointer;
     }
@@ -83,6 +83,7 @@ export default {
   &__active {
     background: rgb(69, 69, 168);
     border-color: #fff;
+    font-weight: 600;
   }
 }
 </style>
